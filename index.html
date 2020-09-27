@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARUEPC Office Site</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <style>
+        article {
+            padding: 2.5rem 0;
+        }
+
+        article h2 {
+            border-bottom: 2px solid #000000;
+            margin: 0.5rem 0 1.75rem 0;
+            font-weight: 500;
+        }
+
+        section {
+            width: 95%;
+        }
+
+        section h3 {
+            margin: 0.75rem 0;
+        }
+
+        section p {
+            margin: 0;
+        }
+
+        .profile_icon {
+            width: 150px;
+            border: 1px solid #000000;
+        }
+
+        .comic {
+            padding: 2.5rem 2.5rem 0 2.5rem;
+        }
+
+        .comic_card {
+            border: 2px solid #000000;
+            padding: 1.25rem;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .comic_pic {
+            min-width: 200px;
+            max-width: 400px;
+            /* max-height: 500px; */
+            margin-right: 20px;
+            flex: 1;
+            flex-shrink: 0;
+            align-self: start;
+        }
+
+        .comic_pic img,
+        .example img {
+            border: 2px double #919ba5;
+        }
+
+        .comic_intro {
+            flex: 2.5;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            flex-shrink: 1;
+        }
+
+        .comic_title {
+            margin: 30px 0;
+        }
+
+        .comic_detail {
+            margin: 15px 0 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .comic_spec span {
+            margin-right: 15px;
+        }
+        .buy_info{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        .buy_info div{
+            width: 350px;
+        }
+
+        .proposal {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+        .case {
+            border: 2px solid #000000;
+            padding: 20px;
+            margin: 15px;
+            width: 45%;
+            min-width: 260px;
+        }
+
+        .example {
+            margin: 0 0 25px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .watermark {
+            position: absolute;
+            font-size: 6rem;
+            transform: rotate(-45deg) translate(-6rem, 6rem);
+            color: #ffffff60;
+            z-index: 2;
+        }
+
+        .example img {
+            filter: brightness(70%);
+        }
+
+        .center {
+            width: 80%;
+        }
+
+        .process {
+            border: 2px solid #000000;
+            padding: 0 20px 20px 20px;
+            margin: 15px;
+        }
+
+        @media screen and (max-width:769px) {
+            section {
+                width: 100%;
+                padding: 0 1rem;
+            }
+
+            .center {
+                width: 100%;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                padding: 0;
+            }
+
+            .profile_icon {
+                width: 100px;
+            }
+
+            .comic_card {
+                flex-flow: column wrap;
+            }
+
+            .comic_pic {
+                margin: 0;
+                align-self: center;
+            }
+
+            .comic_spec {
+                display: flex;
+                flex-flow: column wrap;
+            }
+            .buy_info{
+                flex-flow: column;
+            }
+            .case {
+                width: 80%;
+            }
+
+            .watermark {
+                position: absolute;
+                font-size: 4.5rem;
+                transform: rotate(-45deg) translate(-4.5rem, 4.5rem);
+                color: #ffffff60;
+                z-index: 2;
+            }
+
+            .proposal {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg_black">
+        <span class="font4 bold white">ARUEPC</span>
+        <div class="menu transition">
+            <div class="bar bar1 transition"></div>
+            <div class="bar bar2 transition"></div>
+            <div class="bar bar3 transition"></div>
+            <ul class="transition">
+                <li class="font2"><a class="transition" href="#NEWS">NEWS</a></li>
+                <li class="font2"><a class="transition" href="#ABOUT">ABOUT</a></li>
+                <li class="font2"><a class="transition" href="#COMIC">COMIC</a></li>
+                <li class="font2"><a class="transition" href="#BUY">BUY</a></li>
+                <li class="font2"><a class="transition" href="#ILLUST">ILLUST</a></li>
+                <li class="font2"><a class="transition" href="#Q&A">Q&A</a></li>
+                <li class="font2"><a class="transition" href="#MASSAGE">MASSAGE</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="wrapper">
+        <aside>
+            <ul class="nav">
+                <li class="font3"><a href="#NEWS">NEWS</a></li>
+                <li class="font3"><a href="#ABOUT">ABOUT</a></li>
+                <li class="font3"><a href="#COMIC">COMIC</a></li>
+                <li class="font3"><a href="#BUY">BUY</a></li>
+                <li class="font3"><a href="#ILLUST">ILLUST</a></li>
+                <li class="font3"><a href="#Q&A">Q&A</a></li>
+                <li class="font3"><a href="#MASSAGE">MASSAGE</a></li>
+            </ul>
+        </aside>
+
+        <div class="main_container">
+            <div class="banner">
+                <img class="img_fit" src="/banner.svg" oncontextmenu="window.event.returnValue=false;">
+            </div>
+            <article id="NEWS" name="NEWS">
+                <h2 class="font1">NEWS</h2>
+                <section>
+                    <h3 class="font3">通販/電子書上架通知</h3>
+                    <p class="font5">
+                        <span class="red">新刊《Domestication》上架以下通路囉! </span>
+                        </br>
+                        實體書: G77的pchome(可海外、G77的蝦皮 、伯樂巷(可海外</br>
+                        電子書: Rgbee、Pubu、Booky</br>
+                        其餘通路(金石堂、虎之穴、亂搭、Booky實體書)也會陸續上架，請各位稍等幾天謝謝~</p>
+
+                </section>
+            </article>
+            <article id="ABOUT" name="ABOUT">
+                <h2 class="font1">ABOUT</h2>
+                <section>
+                    <img class="profile_icon" src="/profile_icon.jpg"
+                        oncontextmenu="window.event.returnValue=false;">
+                    <h3 class="font3">阿盧EPC</h3>
+                    <p class="font5">哈囉！我是阿盧EPC，台灣人。</br>
+                        興趣使然的畫漫畫。</br>
+                        </br>
+                        <span>聯絡請用▼ <a href="mailto:people3895@gmail.com"
+                                class="red">people3895@gmail.com</a></span></br>
+                        </br>
+                        【未來參加場次】</br>
+                        社團名:我在馬桶上笑到美叮美噹</br>
+                        CWT 56 (預計報名)</br>
+                        <span class="font6 gray">除台北CWT與ICE，其餘場次由G77代理販售</span></p>
+
+                </section>
+            </article>
+            <article id="COMIC" name="COMIC">
+                <h2 class="font1">COMIC</h2>
+                <section>
+                    <h3 class="font3">【作品試閱】</h3>
+                    <div class="comic" id="milage" name="milage">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/milage.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL／R18 <i class="fas fa-ban"></i></span><br>
+                                    <span class="font3 bold comic_title">里程數</span>
+                                    <p class=" font5 border_top">
+                                        經營中小型企業的王總時常南北奔波談生意，於是透過車隊的長期租車服務包下小林的計程車。雖然已經同行好一陣子，小林在王總面前卻始終戰戰兢兢小心翼翼，天冷時注意幫他保暖，聽見肚子叫時立刻覓食投餵(?)。直到有一次出差，小林因飯店作業疏失而沒訂到房間，正不知如何是好時卻聽見王總淡定的聲音──「不然就一起睡吧～」「……!!!??」憨直青年與天然大叔的暖心暖胃暖床(??)之旅，正式啟程！
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2019.08</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> 網路連載</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 詳見亂搭</span>
+                                    </div>
+                                    <a class="btn"
+                                        href="https://tw.myrenta.com/item/115641?utm_source=original&utm_medium=comicist&utm_campaign=promote&utm_content=OC02_alu"
+                                        target="_blank">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="domestication" name="domestication">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/domestication.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL／R18 <i class="fas fa-ban"></i></span><br>
+                                    <span class="font3 bold comic_title">Domestication</span>
+                                    <p class=" font5 border_top">有點殘酷、有點純愛的故事。<br>
+                                        <span class="font6 red">觸手/人外/產卵注意</span>
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2020.08</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／36P</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 200元</span>
+                                    </div>
+                                    <a class="btn" href="domestication.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="tiger1" name="tiger1">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/tiger1.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL／R18 <i class="fas fa-ban"></i></span><br>
+                                    <span class="font3 bold comic_title">詇虎為患１</span>
+                                    <p class=" font5 border_top">「我們曾經很要好沒錯…但那都是過去的事情了。」<br>
+                                        受母親所託，上班族宗哥(年上)不情願的把多年不見的青梅竹馬小建(年下)接進自己住的公寓裡。儘管現在尷尬，過去是鄰居的他們曾經形影不離，一起開心玩耍，一起放學，一起睡同一張床…「我會盡快找到住處的，抱歉給宗哥添麻煩了…」喝了酒之後，小建醉醺醺的壓在宗哥身上，沉重的粗喘，紅透的雙頰，這樣的場景居然讓宗哥充滿了危險的既視感……?年下攻究竟能不能與過去的青梅竹馬重修舊好呢？
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2018.12</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／88p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 250元</span>
+                                    </div>
+                                    <a class="btn" href="tiger1.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="tiger2" name="tiger2">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/tiger2.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL</span><br>
+                                    <span class="font3 bold comic_title">詇虎為患２</span>
+                                    <p class=" font5 border_top">「你只是搞混了而已。」<br>
+                                        儘管每天被小建伺候的服服貼貼，宗哥仍無法相信小建的心意。<br>
+                                        某天，他們約好了晚上回家談談，沒想到在家等待許久的小建，開門迎接的卻是……傲嬌年上受與金髮年下攻的故事，第二集!
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2019.02</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／52p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 240元</span>
+                                    </div>
+                                    <a class="btn" href="tiger2.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="tiger3" name="tiger3">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/tiger3.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL／R18 <i class="fas fa-ban"></i></span><br>
+                                    <span class="font3 bold comic_title">詇虎為患３</span>
+                                    <p class=" font5 border_top">「我真的、很對不起……」<br>
+                                        小建突然的搬出宗哥的公寓，並且了無音訊，宗哥焦急的聯絡他的同時，想起兩人小時候的回憶——也許搞混的人不只小建一個?年下攻努力挽回青梅竹馬年上的故事，第三集!
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2019.08</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／92p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 250元</span>
+                                    </div>
+                                    <a class="btn" href="tiger3.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="tiger4" name="tiger4">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/tiger4.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL／R18 <i class="fas fa-ban"></i></span><br>
+                                    <span class="font3 bold comic_title">詇虎為患４</span>
+                                    <p class=" font5 border_top">「我會努力克服的!」<br>「我又不覺得早洩有什麼大不了的。」<br>
+                                        經過幾番波折，宗哥與小建總算交往了，但兩人面對的考驗似乎還沒結束……?年下與年上的BL故事第四集完結篇，另也有收錄兩人小時候的回憶與初識的故事!
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2020.05</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／146p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 300元</span>
+                                    </div>
+                                    <a class="btn" href="tiger4.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="magic_cube1" name="magic_cube1">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/magic_cube1.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL／R18 <i class="fas fa-ban"></i></span><br>
+                                    <span class="font3 bold comic_title">魔術方塊〈上〉</span>
+                                    <p class=" font5 border_top">「看著我被你的一舉一動弄得緊張兮兮的樣子好玩嗎?」<br>
+                                        2006年的夏天，陳柏與注意轉學生李為銘已經有一陣子了，起初柏與只認為他是個相處起來很自在的人，最近卻發現他的一舉一動都變得很不自然……?「很可笑、很噁心對吧?」面對眼前這個雙手微微顫抖的人，柏與究竟會……?有點苦澀的校園故事，第一集。
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2018.03</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／76p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 270元</span>
+                                    </div>
+                                    <a class="btn" href="magic_cube1.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="magic_cube2" name="magic_cube2">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/magic_cube2.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL／R18 <i class="fas fa-ban"></i></span><br>
+                                    <span class="font3 bold comic_title">魔術方塊〈中〉</span>
+                                    <p class=" font5 border_top">「我也得為我的人脈著想啊。」<br>
+                                        透過同學，知曉了為銘過去的柏與，不顧想掙脫的為銘，緊緊的抱住他道歉。「你知道了什麼?」「你以前學校的事。」「……只有那個?」回憶的面紗慢慢揭開的第二集，本集也收錄兩人第一次到柏與家約會的番外篇。
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2018.05</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／74p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 270元</span>
+                                    </div>
+                                    <a class="btn" href="magic_cube2.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="magic_cube3" name="magic_cube3">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/magic_cube3.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL</span><br>
+                                    <span class="font3 bold comic_title">魔術方塊〈下〉</span>
+                                    <p class=" font5 border_top">「都是我的錯。」<br>
+                                        為銘的過去真相大白，同時因為父親出國工作，為銘必須跟著搬家轉學，兩人分離的日子就快到了，這段關係究竟會如何呢……?2006年夏天開始的校園物語，完結。
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2018.11</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／60p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 250元</span>
+                                    </div>
+                                    <a class="btn" href="magic_cube3.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="fools_dance" name="fools_dance">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/fools_dance.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL</span><br>
+                                    <span class="font3 bold comic_title">Fool's Dance</span>
+                                    <p class=" font5 border_top">
+                                        19世紀，英國某處的愚人節舞會，眾人戴著華麗的面具隱藏自己的臉孔隨音樂起舞，卻有一名男子渾身不自在，舞技極差的他甚至踩破了女士的裙擺，就在這時，他被一名陌生黑髮男子牽起手了?「今天是允許胡鬧的節日，就讓我們把握機會好好練習，怎麼樣?」
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2019.05</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／24p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 160元</span>
+                                    </div>
+                                    <a class="btn" href="fools_dance.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="sister1" name="sister1">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/sister1.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創GL</span><br>
+                                    <span class="font3 bold comic_title">樓下的姊姊〈上〉</span>
+                                    <p class=" font5 border_top">
+                                        「前列腺是什麼東西?」「那是新的捷運路線!」「是嗎……原來姊姊你都在看這種色色的書啊?」BL漫畫家姊姊被小妹妹耍得團團轉的原創百合，上集
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2018.05</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／28p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 150元</span>
+                                    </div>
+                                    <a class="btn" href="sister1.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="sister2" name="sister2">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/sister2.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創GL</span><br>
+                                    <span class="font3 bold comic_title">樓下的姊姊〈下〉</span>
+                                    <p class=" font5 border_top">「再這樣下去姊姊會被別人搶走的不是嗎?!」<br>
+                                        「……這個台詞，好像可以用在下一回的連載上……」「你有在聽我說嗎?!」BL漫畫家姊姊被小妹妹耍得團團轉的原創百合，下集
+                                        妹妹長大後的番外只收錄於實體書或電子書
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2018.10</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／30p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 150元</span>
+                                    </div>
+                                    <a class="btn" href="sister2.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comic" id="delivery" name="delivery">
+                        <div class="comic_card">
+                            <div class="comic_pic">
+                                <img class="img_fit" src="/delivery.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="comic_intro">
+                                <div class="comic_intro_main">
+                                    <span class="red font6">原創BL／R18 <i class="fas fa-ban"></i></span><br>
+                                    <span class="font3 bold comic_title">日送到府</span>
+                                    <p class=" font5 border_top">「我不要再爬樓梯了…」<br>
+                                        在速食店當外送員的阿偉，最近一直接到同一位客人的外送單，那人右腳骨折，加上公寓大樓的電梯壞掉，因此每天都叫外送，讓必須爬11層樓梯外送的阿偉叫苦連連。「嗨，今天也是你來送呢。」「哈哈是啊……嗯?」那人房間裡傳來的音樂，這個……不是自己小時候最愛看的那個動畫的主題曲嗎?!接著不僅外送餐點，那人連家裡打掃也交給阿偉負責了?!布丁頭外送小哥X眼鏡骨折宅男的每日外送到府服務，阿偉服務業的技能究竟要包山包海到什麼地步呢?
+                                    </p>
+                                </div>
+                                <div class="comic_detail">
+                                    <div class="comic_spec">
+                                        <span class="font6 gray"><i class="far fa-calendar-alt"></i> 2017.12</span>
+                                        <span class="font6 gray"><i class="fas fa-book-open"></i> A5／106p</span>
+                                        <span class="font6 gray"><i class="fas fa-dollar-sign"></i> 300元</span>
+                                    </div>
+                                    <a class="btn" href="delivery.html">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article id="BUY" name="BUY">
+                <h2 class="font1">BUY</h2>
+                <section>
+                    <h3 class="font3">作品哪裡買?</h3>
+                    <div class="indent buy_info">
+                        <div class="webshop">
+                            <p class="font4 bold">網路商店</p>
+                            <a class="font4 indent leading" href="https://is.gd/jGW4w2" target="_blank"><i
+                                    class="fas fa-store-alt"></i> G77工作室</a><span class="gray font5">
+                                pchome商店，可寄海外</span><br>
+                            <a class="font4 indent leading"
+                                href="https://shopee.tw/search?keyword=%E9%98%BF%E7%9B%A7epc&shop=115870512"
+                                target="_blank"><i class="fas fa-store-alt"></i> G77工作室</a><span class="gray font5">
+                                蝦皮賣場</span><br>
+                            <a class="font4 indent leading" href="https://pse.is/J2948" target="_blank"><i
+                                    class="fas fa-store-alt"></i> 伯樂巷</a><span class="gray font5"> 可寄海外</span><br>
+                            <a class="font4 indent leading"
+                                href="https://www.kingstone.com.tw/acg/21023?pnode=CategoryList_acg_20719"
+                                target="_blank"><i class="fas fa-store-alt"></i> 金石堂網路書店</a><span class="gray font5">
+                                可港澳</span><br>
+                        </div>
+                        <div class="ebook">
+                            <p class="font4 bold">電子書</p>
+                            <a class="font4 indent leading" href="https://www.pubu.com.tw/store/3792691" target="_blank"><i
+                                    class="fas fa-book"></i> PUBU電子書</a><br>
+                            <a class="font4 indent leading" href="https://www.rgbee.net/store/2008" target="_blank"><i
+                                    class="fas fa-book"></i> rgbee電子書</a><br>
+                            <a class="font4 indent leading" href="https://tw.myrenta.com/category/a/%E9%98%BF%E7%9B%A7EPC"
+                                target="_blank"><i class="fas fa-book"></i> 亂搭電子書</a><br>
+                        </div>
+                        <div class="shop">
+                            <p class="font4 bold">實體店面</p>
+                            <a class="font4 indent leading" href="https://www.facebook.com/taiwantoranoana/"
+                                target="_blank"><i class="fas fa-store"></i> 虎之穴台北店</a><br>
+                            <a class="font4 indent leading" href="https://www.facebook.com/kantsuu/" target="_blank"><i
+                                    class="fas fa-store"></i> G77工作室</a><br>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article id="ILLUST" name="ILLUST">
+                <h2 class="font1">ILLUST</h2>
+                <section>
+                    <h3 class="font3">【阿盧EPC的非商用委託】</h3>
+                    <div class="proposal">
+                        <div class="case">
+                            <div class="example">
+                                <div class="watermark" oncontextmenu="window.event.returnValue=false;">EXAMPLE</div>
+                                <img class="img_fit" src="/example_icon.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="spec">
+                                <h4 class="bold">頭貼，台幣<span class="red">650</span>元起</h4>
+                                <p class=" font6 border_top">
+                                    規格：1000*1000px，300dpi <br> 線稿色塊+簡單光影(黑白也可)
+                                </p>
+                                <span class="font6 gray">製程大約需要一星期</span>
+                            </div>
+                        </div>
+                        <div class="case">
+                            <div class="example">
+                                <div class="watermark" oncontextmenu="window.event.returnValue=false;">EXAMPLE</div>
+                                <img class="img_fit" src="/example_A.jpg"
+                                    oncontextmenu="window.event.returnValue=false;">
+                            </div>
+                            <div class="spec">
+                                <h4 class="bold">A款，台幣<span class="red">1500</span>元起</h4>
+                                <p class=" font6 border_top">
+                                    規格：信件討論<br>
+                                    線稿色塊+簡單光影(黑白也可)
+                                </p>
+                                <span class="font6 gray">製程大約需要一星期</span>
+                            </div>
+                        </div>
+                        <!-- <div class="case">
+                            <div class="example" oncontextmenu="window.event.returnValue=false;"><img src="/" oncontextmenu="window.event.returnValue=false;"></div>
+                            <div class="spec">
+                                <h4 class="bold">B款，台幣<span class="red">2800</span>元起</h4>
+                                <p class=" font6 border_top">
+                                    規格：信件討論<br>
+                                    光影與完稿度稍加提升，但仍保留一些粗糙之處。
+                                </p>
+                                <span class="font6 gray">製程大約需要二星期</span>
+                            </div>
+                        </div>
+                        <div class="case">
+                            <div class="example" oncontextmenu="window.event.returnValue=false;"><img src="/" oncontextmenu="window.event.returnValue=false;"></div>
+                            <div class="spec">
+                                <h4 class="bold">C款，台幣<span class="red">3500</span>元起</h4>
+                                <p class=" font6 border_top">
+                                    規格：信件討論<br>
+                                    精修完稿，可選擇要厚塗風格或有線稿的風格。
+                                </p>
+                                <span class="font6 gray">製程大約需要三星期～一個月</span>
+                            </div>
+                        </div> -->
+                    </div>
+                    <h3 class="font3 bold">【委託流程】</h3>
+                    <div class="process">
+                        <h4 class="bold">①寄Email到 <a href="mailto:people3895@gmail.com"
+                                class="red font4 bold">people3895@gmail.com</a></h4>
+                        <div class="border_top indent">
+                            <p class=" font6 ">
+                                <span class="bold">信件主旨</span><br>
+                                【非商用委託詢問】<span class="red">XXX</span>(您的稱呼) <br>
+                                <span class="bold">內文</span><br>
+                                委託人： <span class="red">您的名字</span> <br>
+                                款式： <span class="red">頭貼/A款/ <span style="text-decoration:line-through;"> B款</span>/
+                                    <span style="text-decoration:line-through;"> C款</span></span><br>
+                                角色參考資料：<span class="red">簡單文字介紹+附圖，無圖可議</span><br>
+                                成品尺寸/用途：<span class="red">頭貼者不用填這題。若不知尺寸該多少，請填用途由我幫您決定</span><br>
+                                內容_選填：<span class="red">選填，希望的情境、畫面之類</span>
+                            </p>
+                        </div>
+                        <h4 class="bold">②報價，確認，給草圖</h4>
+                        <div class="border_top indent">
+                            <p class=" font6 ">
+                                <span class="bold">草稿狀態可以修改一次</span><br>
+                                線稿~上色會在付款後進行。
+
+                            </p>
+                        </div>
+                        <h4 class="bold">③付款，收到後開始完稿</h4>
+                        <div class="border_top indent">
+                            <p class=" font6 ">
+                                <span class="bold">付款方式 </span><br>
+                                轉帳匯款 / paypal (海外適用)
+                            </p>
+                        </div>
+                        <h4 class="bold">④按照製期完成</h4>
+                        <div class="border_top indent">
+                            <p class=" font6 ">
+                                <span class="red bold">完稿修改次數基本為一次</span><br>
+                                <span class="red">草稿修改一次，完稿修改一次，一件作品總共修改兩次。完稿修改若超過一次會加價，另討論。</span> <br>
+                                交期可以討論，如果有特殊日期需求請在最初來信告知。
+                            </p>
+                        </div>
+                        <p class="bold">除了頭貼之外，成品尺寸自由指定 <span class="gray font6">(若不知尺寸該多少，請填用途由我幫您決定)</span><br>
+                            最大不超過A4 解析度不超過600dpi，可能會依因素加價<span class="gray font6">(人物數量、急件、背景、複雜度、修改次數、R18等)</span><br>
+                            完成後會縮小圖壓浮水印發佈於個人SNS、或收錄在作品集中，<span class="red">若不希望公開請主動告知。</span><br>
+                            <br><span class="red">本表單價格條件都是非商用，若要商用 (拿成品做任何形式的營利或販賣)請主動告知。</span>
+                        </p>
+                    </div>
+                </section>
+            </article>
+            <article id="Q&A" name="Q&A">
+                <h2 class="font1">Q&A</h2>
+                <section class="center">
+                    <h4 class="font4">Q&A回覆不定時更新</h4>
+                    <iframe width="90%" height="520"
+                        src="https://gdoc.pub/doc/e/2PACX-1vQ3FllxUbjIFgyVpZTdHqVsbqZr2ZVT6Ku4EviTXBct9fvx9HEir15DTVDjEKwLLmcwGutjIybdUut5"></iframe>
+
+                </section>
+            </article>
+            <article id="MASSAGE" name="MASSAGE">
+                <h2 class="font1">MASSAGE</h2>
+                <section class="center">
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdYgho5AMuCDVG9QhymsVgUItenwMLEPootmlCfB2kQvHZOyA/viewform?embedded=true"
+                        width="90%" height="650" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+
+                </section>
+            </article>
+
+        </div>
+
+    </main>
+    <footer class="bg_black">
+        <span class="font7 gray Copyright">Copyright © 2020 ARUEPC. All rights reserved.</span>
+        <ul class="sns">
+            <li><a href="https://www.doujin.com.tw/authors/info/people3895" target="_blank"><img
+                        src="/web.svg"></a></li>
+            <li><a href="https://www.facebook.com/ARUEPC/" target="_blank"><img src="/facebook.svg"></a></li>
+            <li><a href="https://www.plurk.com/people2105" target="_blank"><img src="/plurk.svg"></a></li>
+            <li><a href="https://www.instagram.com/people3895/" target="_blank"><img src="/instagram.svg"></a>
+            </li>
+            <li><a href="https://twitter.com/EighPiece" target="_blank"><img src="/twitter.svg"></a></li>
+            <li><a href="http://www.pixiv.net/member.php?id=2210662" target="_blank"><img src="/pixiv.svg"></a>
+            </li>
+        </ul>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+        $(".menu").click(function () {
+            $(this).toggleClass('active');
+        });
+    </script>
+</body>
+
+</html>
